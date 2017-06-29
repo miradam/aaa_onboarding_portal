@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!-- mobile first -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- TODO: package jquery instead of pulling from the CDN -->
+<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<!-- patternfly stuff --> 
+<link rel="stylesheet" type="text/css" href="/assets/css/patternfly.css">
+<script src="/assets/js/bootstrap.min.js"></script>
+<script src="/assets/js/patternfly.js"></script>
+</head>
+<body>
+<header>
+    <nav class="navbar navbar-default navbar-static-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" 
+                        data-toggle="collapse" data-target="#portal-navbar" 
+                        aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/">MCP AAA Onboarding Portal</a>
+            </div>
+
+            <div class="collapse navbar-collapse" id="portal-navbar">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="/new_user">New MCP MMO User</a></li>
+                    <li><a href="/request_access">Request MCP MMO Access</a></li>
+                    <li><a href="/approve_access">Approve MCP MMO Access Request</a></li>
+                    <li><a href="/manage_access">Manage or cancel MCP MMO Access</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+<main>
+{% block content %}
+<div class="container">
+    <h1>Welcome to the MCP AAA Onboarding Portal</h1>
+</div>
+{% endblock %}
+</main>
+</body>
+</html>
